@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decentralized Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Decentralized Blog</h1>
+    
+    <!-- Formulir input untuk membuat postingan blog -->
+    <form id="createPostForm">
+        <label for="postTitle">Title:</label>
+        <input type="text" id="postTitle" name="postTitle" required>
+        <br>
+        <label for="postContent">Content:</label>
+        <textarea id="postContent" name="postContent" rows="4" required></textarea>
+        <br>
+        <button type="button" onclick="createPost()">Create Post</button>
+    </form>
+
+    <!-- Daftar postingan blog -->
+    <div id="blogPosts">
+        <!-- Postingan blog akan ditampilkan di sini -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
