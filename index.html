@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <object type="text/html" data="walletConnectButton.html" style="position: absolute; top: 20px; right: 20px;"></object>
+    <!-- Wallet Connect Button -->
+    <div id="walletConnectButton">
+        <button onclick="connectWallet()" class="wallet-connect-button">Wallet Connect</button>
+    </div>
 
     <!-- Main heading of the page -->
     <h1>Decentralized Blog</h1>
@@ -20,7 +23,7 @@
         <label for="postContent">Content:</label>
         <textarea id="postContent" name="postContent" rows="4" required></textarea>
         <br>
-        <button type="button" onclick="createPost()">Create Post</button>
+        <button type="button" onclick="createPost()" class="wallet-connect-button">Create Post</button>
     </form>
 
     <!-- Daftar postingan blog -->
