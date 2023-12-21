@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <object type="text/html" data="walletConnectButton.html" style="position: absolute; top: 20px; right: 20px;"></object>
+
+    <!-- Main heading of the page -->
     <h1>Decentralized Blog</h1>
-    
+
     <!-- Formulir input untuk membuat postingan blog -->
     <form id="createPostForm">
         <label for="postTitle">Title:</label>
@@ -25,6 +28,19 @@
         <!-- Postingan blog akan ditampilkan di sini -->
     </div>
 
-    <script src="app.js"></script>
+    <!-- Script untuk fungsi yang mungkin diperlukan di sini -->
+    <script>
+        // Fungsi yang mungkin Anda perlukan dapat ditambahkan di sini
+        function createPost() {
+            // Logika untuk membuat postingan blog
+            console.log("Create post function");
+        }
+
+        // Fungsi untuk menggantikan connectWallet()
+        function connectWallet() {
+            // Logika untuk menghubungkan dompet
+            alert("Wallet connected!");
+        }
+    </script>
 </body>
 </html>
