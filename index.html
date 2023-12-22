@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decentralized Blog</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Tambahkan tag script untuk MetaMask SDK di sini -->
+    <script type="module">
+        import { MetaMaskSDK } from '@metamask/sdk';
+
+        const MMSDK = new MetaMaskSDK({
+          dappMetadata: {
+            name: "Decentralized Blog",
+            url: window.location.host,
+          }
+          // Opsi lainnya
+        });
+
+        const ethereum = MMSDK.getProvider();
+    </script>
 </head>
 <body>
     <!-- Wallet Connect Button -->
@@ -41,8 +55,15 @@
 
         // Fungsi untuk menggantikan connectWallet()
         function connectWallet() {
-            // Logika untuk menghubungkan dompet
-            alert("Wallet connected!");
+            ethereum.request({ method: 'eth_requestAccounts', params: [] })
+            .then((accounts) => {
+                alert("Wallet connected! Account: " + accounts[0]);
+                // Tambahkan logika tambahan jika diperlukan
+            })
+            .catch((error) => {
+                console.error("Error connecting wallet:", error.message);
+                // Handle error jika diperlukan
+            });
         }
     </script>
 </body>
