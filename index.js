@@ -9,6 +9,15 @@ const MMSDK = new MetaMaskSDK({
     // Opsi lainnya
 });
 
+if (typeof ethereum === 'undefined') {
+    Object.defineProperty(window, 'ethereum', {
+        value: MMSDK.getProvider(),
+        writable: false,
+    });
+} else {
+    console.warn('ethereum is already defined. Skipping redefinition.');
+}
+
 const ethereum = MMSDK.getProvider();
 
 // Fungsi yang mungkin Anda perlukan dapat ditambahkan di sini
