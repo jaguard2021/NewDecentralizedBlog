@@ -1,4 +1,4 @@
-// Import MetaMaskSDK
+// Tambahkan import MetaMaskSDK di sini
 import { MetaMaskSDK } from '@metamask/sdk';
 
 const MMSDK = new MetaMaskSDK({
